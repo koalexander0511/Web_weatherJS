@@ -1,0 +1,99 @@
+<!doctype HTML>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,200,300,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,300" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="weather.css">
+</head>
+
+<body>
+    <div class="upper" id="upperPart">
+        <header>
+            <div class="mobHeader">
+                <p>Local Weather</p>
+                <p>Six Hour Forecast</p>
+            </div>
+            <div class="header">
+                <p>Local Weather Six Hour Forecast</p>
+            </div>
+        </header>
+        <h2>
+            Northern California with doppler radar
+        </h2>
+        
+        <div class="webForecast">
+            <div class="input">
+                <p class="forecast">Forecast for</p>
+                <div class="inputBox">
+                    <input type="text" placeholder="Davis, CA" class="search" name="Davis, CA" id="location">
+                    <button class="buttonText" onclick="submit()" id="button">submit</button>
+                </div>
+            </div>
+                
+            <div class="weatherDoppler">
+                <div class="currentInfo">
+                    <img class="currentImage" id="img0" src="../assets/fewclouds-day.svg" alt="current pic"/>
+                    <div class="timeTemp">
+                        <div class="time">
+                            <p>current</p>
+                            <p id="time0">12PM</p>
+                        </div>
+                        <label class="vert">|</label>
+                        <label class="temp" id="temp0">67°</label>
+                    </div>
+                </div>
+                <div class="radar">
+                    <img class="radar" src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg" alt="Img Not found">
+                    <img id="dax" class="gif" src="https://radar.weather.gov/ridge/RadarImg/N0R/DAX_N0R_0.gif" alt="Img Not Found">
+                    <img class="gif" src="http://radar.weather.gov/ridge/Overlays/Cities/Short/DAX_City_Short.gif" alt="Img Not found">
+                </div>
+            </div>
+        </div>
+        
+        <div class="arrow">
+            <img class="arrowImg" src="../assets/upArrow.svg" alt="up" onclick="upClick()">
+        </div>
+    </div>
+    <div class="bottomPart" id="lowerPart">
+        <div class="arrow">
+            <img class="arrowImg" src="../assets/downArrow.svg" alt="up" onclick="downClick()">
+        </div>
+        <div class="box">
+            <label class="boxTime" id="time1">1:00 pm</label>
+            <img class="boxImg" id="img1" src="../assets/scatteredclouds.svg" alt="box1_img">
+            <label class="boxTemp" id="temp1">67°</label>
+        </div>
+        <hr>
+        <div class="box">
+            <label class="boxTime" id="time2">2:00 pm</label>
+            <img class="boxImg" id="img2" src="../assets/showerrain.svg" alt="box2_img">
+            <label class="boxTemp" id="temp2">68°</label>
+        </div>
+        <hr>
+        <div class="box">
+            <label class="boxTime" id="time3">3:00 pm</label>
+            <img class="boxImg" id="img3" src="../assets/fewclouds-day.svg" alt="box3_img">
+            <label class="boxTemp" id="temp3">70°</label>
+        </div>
+        <hr>
+        <div class="box">
+            <label class="boxTime" id="time4">4:00 pm</label>
+            <img class="boxImg" id="img4" src="../assets/clearsky.svg" alt="box4_img">
+            <label class="boxTemp" id="temp4">70°</label>
+        </div>
+        <hr>
+        <div class="box">
+            <label class="boxTime" id="time5">5:00 pm</label>
+            <img class="boxImg" id="img5" src="../assets/showerrain.svg" alt="box5_img">
+            <label class="boxTemp" id="temp5">71°</label>
+        </div>
+    </div>
+    <main></main>
+    <script src="weather.js"></script>
+</body>
+</html>

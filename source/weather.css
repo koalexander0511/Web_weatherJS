@@ -1,0 +1,722 @@
+body {
+	min-height: 100vh;
+}
+
+@media (max-width: 480px) {
+    header {
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 2.5em;
+        padding-top: 1.5em;
+        padding-bottom: 2.8%;
+        line-height: 1.2;
+    }
+    
+    h2 {
+        width: 100%;
+        text-align: center;
+        color: rgb(45, 48, 150);
+        font-size: larger;
+        font-weight: 700;
+        padding-bottom: 8%;
+        margin-right: 3%;
+    }
+    
+    .upper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        font-family: 'IBM Plex Sans', sans-serif;
+        position: absolute;
+        color: white;
+        background-image: linear-gradient(#498adc, #623b9c);
+    }
+    
+    .upperAnimate {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        font-family: 'IBM Plex Sans', sans-serif;
+        position: absolute;
+        color: white;
+        background-image: linear-gradient(#498adc, #623b9c);
+        animation-name: slideDown;
+        animation-fill-mode: forwards;
+        animation-duration: 1.5s;
+    }
+    
+    .upperAnimateRev {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        font-family: 'IBM Plex Sans', sans-serif;
+        position: absolute;
+        color: white;
+        background-image: linear-gradient(#498adc, #623b9c);
+        animation-name: slideUp;
+        animation-fill-mode: forwards;
+        animation-duration: 1.5s;
+    }
+    
+    .bottomPart {
+        width: 100%;
+        font-family: 'Saira Extra Condensed', sans-serif;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        bottom: 100%;
+    }
+    
+    .box {
+        width: 100%;
+        font-weight: 300;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .boxTemp {
+        font-size: 6em;
+        margin-top: 3%;
+    }
+    
+    .boxTime {
+        margin-top: 10%;
+        font-size: 2em;
+    }
+    
+    .boxImg {
+        width: 20%;
+        display: block;
+    }
+    
+    .bottomAnimate {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        font-family: 'Saira Extra Condensed', sans-serif;
+        animation-name: moveUp;
+        animation-fill-mode: forwards;
+        animation-duration: 1.5s;
+    }
+    
+    .bottomAnimateRev {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        font-family: 'Saira Extra Condensed', sans-serif;
+        animation-name: moveDown;
+        animation-fill-mode: forwards;
+        animation-duration: 1.5s;
+    }
+    
+    main {
+        
+    }
+    
+    .mobHeader {
+        display: block;
+    }
+    
+    .header {
+        display: none;
+    }
+    
+    .webForecast {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    p.forecast {
+        text-align: left;
+        margin-left: 10%;
+        padding-bottom: 20px;
+        font-size: 1.5em;
+    }
+    
+    .inputBox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .search {
+        width: 50%;
+        color: white;
+        background-color: rgb(50,50,150);
+        text-align: center;
+        font-size: x-large;
+        margin-left: 10%;
+        height: 1.3em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 300;
+        border: none;
+    }
+    
+    .buttonText {
+        width: 20%;
+        text-align: center;
+        font-size: larger;
+        color: rgb(229, 227, 224);
+        background-color: rgb(127, 150, 219);
+        border: none;
+        height: 1.8em;
+    }
+    
+    .weatherDoppler {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .currentInfo {
+        flex-direction: column;
+    }
+    
+    .currentImage {
+        width: 100%;
+        padding-top: 55px;
+        padding-bottom: 35px;
+    }
+    
+    .timeTemp {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        font-weight: 100;
+        font-family: 'Saira Extra Condensed', sans-serif;
+        text-align: center;
+        padding-bottom: 1.8em;
+        line-height: 1;
+    }
+    
+    .time {
+        flex-direction: column;
+        margin-top: 12px;
+        font-size: 3em;
+    }
+    
+    .vert {
+        color: black;
+        font-size: 8em;
+        font-weight: 100;
+        padding-right: 22px;
+        padding-left: 22px;
+    }
+    
+    .temp {
+        margin-top: 5px;
+        font-size: 6em;
+    }
+    
+    .radar {
+        display: none;
+    }
+    
+    .arrow {
+        width: 100%;
+        padding-top: 1.3em;
+        padding-bottom: 1.3em;
+    }
+    
+    .arrowImg {
+        width: 13%;
+        display: block;
+        margin: auto;
+    }
+    
+    hr {
+        width: 95%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        color: black;
+    }
+    
+    @keyframes slideDown {
+        from {
+            bottom: 0%;
+        }
+        to {
+            bottom: 100%;
+        }
+    }
+    
+    @keyframes slideUp {
+        from {
+            bottom: 100%;
+        }
+        to {
+            bottom: 0%;
+        }
+    }
+    
+    @keyframes moveUp {
+        from {
+            top: 100%;
+        }
+        to {
+            top: 0%;
+        }
+    }
+    
+    @keyframes moveDown {
+        from {
+            top: 0%;
+        }
+        to {
+            top: 100%;
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 779px) {
+    
+    header {
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 3em;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        line-height: 1;
+    }
+    
+    h2 {
+        width: 100%;
+        text-align: center;
+        color: rgb(45, 48, 150);
+        font-size: 2em;
+        font-weight: 700;
+        padding-bottom: 4%;
+        margin-right: 2.5%;
+    }
+    
+    .upper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'IBM Plex Sans', sans-serif;
+        color: white;
+        background-image: linear-gradient(#498adc, #623b9c);
+    }
+    
+    .bottomPart {
+        width: 100%;
+        font-family: 'Saira Extra Condensed', sans-serif;
+        display: flex;
+        flex-direction: row;
+        background-image: linear-gradient(gray 0%, white 20%);
+    }
+    
+    .box {
+        width: 20%;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5%;
+    }
+    
+    .boxTemp {
+        font-size: 10vw;
+    }
+    
+    .boxTime {
+        margin-top: 50%;
+        font-size: 4vw;
+    }
+    
+    .boxImg {
+        width: 75%;
+        display: block;
+        margin-top: 50%;
+        margin-bottom: 50%;
+    }
+    
+    main {
+        
+    }
+    
+    .mobHeader {
+        display: none;
+    }
+    
+    .header {
+        display: block;
+    }
+    
+    .webForecast {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .input {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    p.forecast {
+        text-align: left;
+        margin-left: 13%;
+        padding-bottom: 20px;
+        font-size: 1.5em;
+    }
+    
+    .inputBox {
+        width: 55%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .search {
+        width: 80%;
+        color: white;
+        background-color: rgb(50,50,150);
+        text-align: center;
+        font-size: x-large;
+        margin-left: 5%;
+        height: 1.3em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 300;
+        border: none;
+    }
+    
+    .buttonText {
+        width: 23%;
+        text-align: center;
+        font-size: larger;
+        color: rgb(229, 227, 224);
+        background-color: rgb(127, 150, 219);
+        border: none;
+        height: 1.8em;
+        margin-left: 5%;
+    }
+    
+    .weatherDoppler {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .currentInfo {
+        width: 63%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+    }
+    
+    .currentImage {
+        width: 20vw;
+        padding-top: 50px;
+        padding-bottom: 33px;
+        margin-left: 3em;
+    }
+    
+    .timeTemp {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        font-weight: 100;
+        font-family: 'Saira Extra Condensed', sans-serif;
+        text-align: center;
+        line-height: 1.2;
+        padding-bottom: 2em;
+    }
+    
+    .time {
+        flex-direction: column;
+        margin-top: 12px;
+        font-size: 3em;
+    }
+    
+    .vert {
+        color: black;
+        font-weight: 100;
+        font-size: 6.5em;
+        padding-right: 22px;
+        padding-left: 22px;
+    }
+    
+    .temp {
+        font-family: 'Saira Extra Condensed', sans-serif;
+        font-size: 8em;
+    }
+    
+    .radar {
+        width: 60%;
+        display: flex;
+        position: relative;
+        margin-top: 22%;
+        margin-bottom: 12%;
+    }
+    
+    img.radar {
+        width: 100%;
+        position: absolute;
+        filter: grayscale(100%);
+        clip-path: circle(35%);
+        right: 0;
+        bottom: 0;
+    }
+    
+    .gif {
+        width: 100%;
+        position: absolute;
+        clip-path: circle(35%);
+        margin-right: 0.3em;
+        margin-bottom: 2em;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .arrow {
+        width: 0%;
+        padding-top: 1.3em;
+        padding-bottom: 1.3em;
+    }
+    
+    .arrowImg {
+        display: none;
+    }
+    
+    hr {
+        width: 1px;
+        height: 50vh;
+        border-left: 1px solid darkgrey;
+        border: none;
+    }
+}
+
+@media (min-width: 780px) {
+    
+    header {
+        width: 100%;
+        text-align: left;
+        color: white;
+        margin-left: 7%;
+        font-size: 4em;
+        padding-top: 1.5em;
+        padding-bottom: 0.5em;
+        line-height: 0.5;
+    }
+    
+    h2 {
+        width: 100%;
+        text-align: left;
+        color: rgb(45, 48, 150);
+        font-size: 2.5em;
+        font-weight: 700;
+        padding-bottom: 1em;
+        margin-right: 3%;
+        margin-left: 8%;
+    }
+    
+    .upper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        font-family: 'IBM Plex Sans', sans-serif;
+        color: white;
+        background-image: linear-gradient(#498adc, #623b9c);
+    }
+    
+    .bottomPart {
+        width: 100%;
+        font-family: 'Saira Extra Condensed', sans-serif;
+        display: flex;
+        flex-direction: row;
+        background-image: linear-gradient(gray 0%, white 20%);
+    }
+    
+    .box {
+        width: 20%;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1.5em;
+        margin-left: 5%;
+    }
+    
+    .boxTemp {
+        font-size: 6em;
+        margin-left: .3em;
+    }
+    
+    .boxTime {
+        margin-left: 0.5em;
+        font-size: 2em;
+    }
+    
+    .boxImg {
+        max-width: 60%;
+        display: block;
+        margin-top: 25%;
+        margin-bottom: 25%;
+        height: auto;
+    }
+    
+    main {
+        
+    }
+    
+    .mobHeader {
+        display: none;
+    }
+    
+    .header {
+        display: block;
+    }
+    
+    .webForecast {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .input {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    p.forecast {
+        text-align: left;
+        margin-left: 8%;
+        padding-bottom: 20px;
+        padding-right: 0.5em;
+        font-size: 1.5em;
+    }
+    
+    .inputBox {
+        width: 30em;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .search {
+        width: 70%;
+        color: white;
+        background-color: rgb(50,50,150);
+        text-align: center;
+        font-size: x-large;
+        margin-left: 5%;
+        height: 1.3em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 300;
+        border: none;
+    }
+    
+    .buttonText {
+        width: 20%;
+        text-align: center;
+        font-size: larger;
+        color: rgb(229, 227, 224);
+        background-color: rgb(127, 150, 219);
+        border: none;
+        height: 1.8em;
+    }
+    
+    .weatherDoppler {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 5em;
+        justify-content: space-around;
+    }
+    
+    .currentInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-left: 10%;
+        margin-top: 3em;
+    }
+    
+    .currentImage {
+        width: 100%;
+        order: 2;
+        max-width: 25em;
+        padding-right: 2em;
+    }
+    
+    .timeTemp {
+        display: block;
+        flex-direction: row;
+        font-weight: 100;
+        font-family: 'Saira Extra Condensed', sans-serif;
+        text-align: center;
+        line-height: 1;
+    }
+    
+    .time {
+        flex-direction: column;
+        margin-top: 15px;
+        font-size: 3em;
+    }
+    
+    .vert {
+        display: none;
+    }
+    
+    .temp {
+        font-family: 'Saira Extra Condensed', sans-serif;
+        font-size: 8em;
+        font-weight: 100;
+        line-height: 1.5;
+        order: 3;
+    }
+    
+    .radar {
+        width: 70%;
+        display: flex;
+        position: relative;
+        margin-top: 25%;
+    }
+    
+    img.radar {
+        width: 100%;
+        position: absolute;
+        filter: grayscale(100%);
+        clip-path: circle(35%);
+        right: 0;
+        bottom: 0;
+    }
+    
+    .gif {
+        width: 100%;
+        position: absolute;
+        clip-path: circle(35%);
+        right: 0;
+        bottom: 0;
+    }
+    
+    .arrow {
+        width: 0%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    
+    .arrowImg {
+        display: none;
+    }
+    
+    hr {
+        width: 1px;
+        height: 25vh;
+        margin-top: 5em;
+        border-left: 1px solid darkgrey;
+        border: none;
+    }
+}
